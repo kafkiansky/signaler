@@ -1,0 +1,38 @@
+{
+    "name": "kafkiansky/signaler",
+    "description": "Signaler library that provide stack for signal listeners.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["unix", "posix", "signal", "sigint", "pcntl"],
+    "autoload": {
+        "psr-4": {
+            "Kafkiansky\\Signaler\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kafkiansky\\Signaler\\Test\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "v.zanfir",
+            "email": "vadimzanfir@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "ext-pcntl": "*",
+        "php": ">=7.4",
+        "seld/signal-handler": "^1.3",
+        "psr/log": "^1.1"
+    },
+    "require-dev": {
+        "vimeo/psalm": "^4.22",
+        "phpunit/phpunit": "^9.5"
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit --do-not-cache",
+        "lint": "./vendor/bin/psalm --no-cache"
+    }
+}
